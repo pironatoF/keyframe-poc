@@ -1,0 +1,254 @@
+ @-webkit-keyframes {
+  0%{
+    -webkit-filter: blur(20px) contrast(40);
+            filter: blur(20px) contrast(40);
+
+  }
+  
+  30% {
+    -webkit-filter: blur(0) contrast(1);
+            filter: blur(0) contrast(1);
+
+  }
+  55% {
+    -webkit-filter: blur(40px) contrast(40);
+            filter: blur(40px) contrast(40);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  75% {
+    -webkit-filter: blur(0) contrast(1);
+            filter: blur(0) contrast(1);       
+  } 
+
+  100% {
+    -webkit-filter: blur(0) contrast(1);
+            filter: blur(0) contrast(1);
+            
+  }
+}
+
+
+@keyframes twentySlang {
+   0%{
+    -webkit-filter: blur(20px) contrast(40);
+            filter: blur(20px) contrast(40);
+
+  }
+  
+  30% {
+    -webkit-filter: blur(0) contrast(1);
+            filter: blur(0) contrast(1);
+
+  }
+  55% {
+     -webkit-filter: blur(40px) contrast(40);
+            filter: blur(40px) contrast(40);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  75% {
+    -webkit-filter: blur(0) contrast(1);
+            filter: blur(0) contrast(1);       
+  } 
+
+  100% {
+    -webkit-filter: blur(0) contrast(1);
+            filter: blur(0) contrast(1);
+            
+  }
+}
+.blobs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: white;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  animation: twentySlang 20s linear infinite;
+  webkit-filter: blur(20px) contrast(0);
+        filter: blur(20px) contrast(0);
+  /*-webkit-filter: blur(20px) contrast(30);
+          filter: blur(20px) contrast(30);
+  -webkit-animation: demonstration 10s linear infinite;
+          animation: twentySlang 10s linear infinite;*/
+}
+
+.blob {
+  background: #000;
+ 
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  border-radius: 100%;
+  /*color:#fff;*/
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  
+  
+}
+
+.blob span{
+  top:20%;
+  position: relative;
+   text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+
+
+
+@-webkit-keyframes blob-anim-left {
+  0% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+
+  }
+  50%{
+    margin-right:20px;
+    font-size: 40px;
+    background: -webkit-radial-gradient(#000, #000, #ff9900); /* Safari 5.1 to 6.0 */
+      background: -o-radial-gradient(#000, #000, #ff9900); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(#000, #000, #ff9900); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#000, #000, #ff9900); /* Standard syntax */
+    -webkit-filter: blur(20px) contrast(30);
+            filter: blur(20px) contrast(30);
+            -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+            margin-top:20px;
+  }
+  100% {
+    -webkit-transform: translateX(-155px);
+            transform: translateX(-155px);
+  }
+}
+
+@keyframes blob-anim-left {
+  0% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  
+ 50%{
+    margin-right:20px;
+    font-size: 40px;
+    background: -webkit-radial-gradient(#000, #000, #ff9900); /* Safari 5.1 to 6.0 */
+      background: -o-radial-gradient(#000, #000, #ff9900); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(#000, #000, #ff9900); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#000, #000, #ff9900); /* Standard syntax */
+    /*-webkit-filter: blur(20px) contrast(30);
+            filter: blur(20px) contrast(30);*/
+            -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+            margin-top:20px;
+  }
+  100% {
+    -webkit-transform: translateX(-155px);
+            transform: translateX(-155px);
+  }
+}
+.blob:first-child {
+  -webkit-animation: blob-anim-left ease-in-out 5s infinite alternate;
+          animation: blob-anim-left ease-in-out 5s infinite alternate;
+     background: -webkit-radial-gradient(#424242, #424242, #ff9900); /* Safari 5.1 to 6.0 */
+      background: -o-radial-gradient(#424242, #424242, #ff9900); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(#424242, #424242, #ff9900); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#424242, #424242, #ff9900); /* Standard syntax */
+  color:#ff9900;
+  
+  text-shadow: 2px 2px 8px #424242;
+}
+
+
+
+@-webkit-keyframes blob-anim-right {
+  0% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  50%{
+    margin-top:20px;
+    font-size: 40px;
+   background: -webkit-radial-gradient(#000, #000, #ff9900); /* Safari 5.1 to 6.0 */
+      background: -o-radial-gradient(#000, #000, #ff9900); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(#000, #000, #ff9900); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#000, #000, #ff9900); /* Standard syntax */
+    /*-webkit-filter: blur(20px) contrast(30);
+            filter: blur(20px) contrast(30);*/
+  }
+  100% {
+    -webkit-transform: translateX(55px);
+            transform: translateX(55px);
+  }
+}
+
+@keyframes blob-anim-right {
+  0% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  50%{
+    margin-top:20px;
+    font-size: 40px;
+    background: -webkit-radial-gradient(#000, #000, #ff9900); /* Safari 5.1 to 6.0 */
+      background: -o-radial-gradient(#000, #000, #ff9900); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(#000, #000, #ff9900); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#000, #000, #ff9900); /* Standard syntax */
+   /* -webkit-filter: blur(20px) contrast(30);
+            filter: blur(20px) contrast(30);*/
+  }
+  100% {
+    -webkit-transform: translateX(55px);
+            transform: translateX(55px);
+  }
+}
+.blob:last-child {
+  -webkit-animation: blob-anim-right ease-in-out 5s infinite alternate;
+          animation: blob-anim-right ease-in-out 5s infinite alternate;
+ background: -webkit-radial-gradient(#ff9900, #ff9900, #424242); /* Safari 5.1 to 6.0 */
+      background: -o-radial-gradient(#ff9900, #ff9900, #424242); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(#ff9900, #ff9900, #424242); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#ff9900, #ff9900, #424242); /* Standard syntax */
+    color:#424242;
+   
+  text-shadow: 2px 2px 8px #ff9900;
+}
+
+
+.blob:last-child span , .blob:first-child span{
+
+ -webkit-animation: blob-text ease-in-out 3s infinite alternate;
+          animation: blob-text ease-in-out 3s infinite alternate;
+}
+
+
+@keyframes blob-text{
+  20%{
+    font-size: 40px;
+  }
+  50%{
+   font-size: 100px; 
+  }
+  80%{
+    font-size: 30px;
+  }
+}
+
+.rota{
+-webkit-filter: blur(40px) contrast(40);
+            filter: blur(40px) contrast(40);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+            background: #000;
+    border:1px solid radial-gradient(#ff9900, #ff9900, #424242);
+}

@@ -1,0 +1,37 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="google" value="notranslate">
+  <title>Keyframe poc</title>
+  <style>
+    body {
+      font-family: 'Ubuntu', serif;
+      font-size: 48px;
+    }
+  </style>
+  <script type="text/javascript">
+  window.console = window.console || function(t) {};
+  window.open = function(){ console.log("window.open is disabled."); };
+  </script>
+  <link rel="stylesheet" type="text/css" href="experiment/stylesheets/style.css">  
+</head>
+<body>
+  <div class="help"></div>
+  <div class="blobs">
+  <div class="blob"><span>20TAB</span></div>
+  <div class="blob"><span>PIRONATO</span></div>
+  </div>
+  <script src="js/jquery.js"></script>
+  <script type="text/javascript">
+  $('.blob').click(function(){
+    var selector = $(this);
+    selector.css('display','none')
+    setTimeout(function() {
+          selector.css('display','inline')
+          $('.blobs').addClass('rota')
+          setTimeout(function(){ $('.blobs').removeClass('rota') },5000)   
+    }, 2000);
+  })
+  </script>
+</body>
+</html>

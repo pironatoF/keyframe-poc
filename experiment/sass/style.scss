@@ -1,0 +1,70 @@
+@import "compass/css3";
+
+@keyframes demonstration{
+  0%{
+    filter:blur(0) contrast(1);
+  }
+  25%{
+    filter:blur(0) contrast(1);
+  }
+  30%{
+    filter:blur(20px) contrast(1);
+  }
+  55%{
+    filter:blur(20px) contrast(1);
+    animation-timing-function:ease-in;
+  }
+  80%{
+    filter:blur(20px) contrast(30);
+  }
+  100%{
+    filter:blur(20px) contrast(30);
+  }
+}
+.blobs{
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background:white;
+  width:400px;
+  height:200px;
+  margin:auto;
+  filter:blur(20px) contrast(30);
+  animation:demonstration 10s linear infinite;
+}
+
+.blob{
+  background:black;
+  width:100px;
+  height:100px;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin-top:-50px;
+  margin-left:-50px;
+  border-radius:100%;
+}
+@keyframes blob-anim-left{
+  0%{
+    transform:translateX(-10px);
+  }
+  100%{
+    transform:translateX(-55px);
+  }
+}
+.blob:first-child{
+  animation:blob-anim-left ease-in-out 0.8s infinite alternate;
+}
+@keyframes blob-anim-right{
+  0%{
+    transform:translateX(10px);
+  }
+  100%{
+    transform:translateX(55px);
+  }
+}
+.blob:last-child{
+  animation:blob-anim-right ease-in-out 0.8s infinite alternate;
+}
